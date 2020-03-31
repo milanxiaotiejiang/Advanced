@@ -5,30 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".carton.CartonActivity">
+    tools:context=".memory.MemoryActivity">
+
+    <ImageView
+        android:id="@+id/iv_memory"
+        android:layout_width="100dp"
+        android:layout_height="200dp" />
 
     <Button
-        android:id="@+id/btn_time"
+        android:id="@+id/dump_log"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="分析卡顿" />
+        android:enabled="false"
+        android:text="输出内存 Dump 到日志" />
 
     <Button
-        android:id="@+id/test_gc"
+        android:id="@+id/btn_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test gc" />
+        android:text="开始记录" />
 
     <Button
-        android:id="@+id/test_io"
+        android:id="@+id/btn_stop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test io" />
+        android:text="停止记录" />
 
     <Button
-        android:id="@+id/test_process"
+        android:id="@+id/gen_obj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="process_end" />
-
+        android:text="生成1000个对象" />
 </LinearLayout>

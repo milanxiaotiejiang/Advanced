@@ -36,5 +36,29 @@ public class App extends MultiDexApplication {
 //        CrashHandler crashHandler = CrashHandler.getInstance();
 //        crashHandler.init(getApplicationContext());
 
+
+//        DexposedBridge.hookAllConstructors(Thread.class, new XC_MethodHook() {
+//            @Override
+//            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+//                super.afterHookedMethod(param);
+//                Thread thread = (Thread) param.thisObject;
+//                Class<?> clazz = thread.getClass();
+//                if (clazz != Thread.class) {
+//                    Logger.d("found class extend Thread:" + clazz);
+//                    DexposedBridge.findAndHookMethod(clazz, "run", new ThreadMethodHook());
+//                }
+//                Logger.d("Thread: " + thread.getName() + " class:" + thread.getClass() + " is created.");
+//            }
+//        });
+//        DexposedBridge.findAndHookMethod(Thread.class, "run", new ThreadMethodHook());
+//
+//        DexposedBridge.hookAllConstructors(ImageView.class, new XC_MethodHook() {
+//            @Override
+//            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+//                super.afterHookedMethod(param);
+//                DexposedBridge.findAndHookMethod(ImageView.class, "setImageBitmap", Bitmap.class, new ImageHook());
+//            }
+//        });
+
     }
 }

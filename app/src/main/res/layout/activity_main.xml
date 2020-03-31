@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_carton"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="卡顿" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_crash"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="崩溃" />
+        <Button
+            android:id="@+id/btn_carton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="卡顿" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_crash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="崩溃" />
+
+        <Button
+            android:id="@+id/btn_memory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内存" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

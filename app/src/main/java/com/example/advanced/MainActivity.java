@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.advanced.carton.CartonActivity;
 import com.example.advanced.crash.CrashActivity;
+import com.example.advanced.memory.MemoryActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import io.reactivex.disposables.Disposable;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         carton.setOnClickListener(this);
         Button crash = findViewById(R.id.btn_crash);
         crash.setOnClickListener(this);
+        Button memory = findViewById(R.id.btn_memory);
+        memory.setOnClickListener(this);
     }
 
     @Override
@@ -60,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_crash:
                 startActivity(new Intent(this, CrashActivity.class));
+                break;
+            case R.id.btn_memory:
+                startActivity(new Intent(this, MemoryActivity.class));
                 break;
         }
     }

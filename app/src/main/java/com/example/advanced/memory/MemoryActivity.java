@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.advanced.R;
 import com.example.advanced.app.App;
+import com.robot.seabreeze.log.Logger;
 
 import java.io.InputStream;
 
@@ -53,4 +54,9 @@ public class MemoryActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        Logger.e("" + level);
+    }
 }

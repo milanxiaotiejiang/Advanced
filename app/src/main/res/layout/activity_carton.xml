@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".carton.CartonActivity">
 
     <Button
-        android:id="@+id/btn_carton"
+        android:id="@+id/btn_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="卡顿" />
-
+        android:text="点击事件" />
 </LinearLayout>

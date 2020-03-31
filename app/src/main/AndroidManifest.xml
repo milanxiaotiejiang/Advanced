@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.advanced">
+    <!-- 允许程序访问网络连接，可能产生GPRS流量 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序获取当前WiFi接入的状态以及WLAN热点的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序通过WiFi或移动基站的方式获取用户错略的经纬度信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许程序通过GPS芯片接收卫星的定位信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 允许程序改变WiFi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 允许程序访问额外的定位提供者指令 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 允许程序改变网络状态,如是否联网 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 程序可以读取设备外部存储空间 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 8.0 系统需要 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 允许程序录制声音通过手机或耳机的麦克 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序访问摄像头进行拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 允许程序从非系统拨号器里拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 允许程序访问联系人通讯录信息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 允许程序访问电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序修改电话状态，如飞行模式，但不包含替换系统拨号器界面 -->
+    <uses-permission
+        android:name="android.permission.MODIFY_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许程序接收短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" /> <!-- 允许程序读取短信内容 -->
+    <uses-permission android:name="android.permission.READ_SMS" /> <!-- 允许程序获取任务信息 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 允许程序修改声音设置信息 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 允许程序读取系统底层日志 -->
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许程序开机自动运行 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 允许程序振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 许程序读取或写入系统设置 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许程序挂载、反挂载外部文件系统 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" /> <!-- usb -->
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+
+    <uses-feature android:name="android.hardware.usb.host" /> <!-- 允许程序显示系统窗口 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 允许程序结束任务通过restartPackage(String)方法，该方式将在外来放弃 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" /> <!-- 允许程序禁用键盘锁 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许当前应用改变配置，如定位 -->
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CrashActivity"></activity>
+        <activity android:name=".carton.CartonActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +75,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

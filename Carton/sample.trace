@@ -1,0 +1,239 @@
+*version
+3
+data-file-overflow=false
+clock=dual
+elapsed-time-usec=141298
+num-method-calls=728
+clock-call-overhead-nsec=3767
+vm=art
+pid=4416
+*threads
+4416	main
+4434	Jit thread pool worker thread 0
+4436	Signal Catcher
+4437	JDWP
+4438	ReferenceQueueDaemon
+4439	FinalizerDaemon
+4440	FinalizerWatchdogDaemon
+4441	HeapTaskDaemon
+4442	Binder:4416_1
+4443	Binder:4416_2
+4450	Profile Saver
+4452	RenderThread
+4455	hwuiTask2
+4454	hwuiTask1
+4458	Binder:4416_3
+*methods
+0xf0	java.util.ArrayList	<init>	()V	ArrayList.java
+0x38	java.util.ArrayList	get	(I)Ljava/lang/Object;	ArrayList.java
+0x34	java.util.ArrayList	size	()I	ArrayList.java
+0x150	java.lang.Enum	ordinal	()I	Enum.java
+0xf8	java.util.AbstractCollection	<init>	()V	AbstractCollection.java
+0xd4	java.lang.ThreadLocal$ThreadLocalMap	-wrap0	(Ljava/lang/ThreadLocal$ThreadLocalMap;Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;	ThreadLocal.java
+0xd8	java.lang.ThreadLocal$ThreadLocalMap	getEntry	(Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;	ThreadLocal.java
+0xf4	java.util.AbstractList	<init>	()V	AbstractList.java
+0xdc	java.lang.ThreadLocal	-get0	(Ljava/lang/ThreadLocal;)I	ThreadLocal.java
+0xc8	java.lang.ThreadLocal	get	()Ljava/lang/Object;	ThreadLocal.java
+0xd0	java.lang.ThreadLocal	getMap	(Ljava/lang/Thread;)Ljava/lang/ThreadLocal$ThreadLocalMap;	ThreadLocal.java
+0x88	java.lang.Object	<init>	()V	Object.java
+0x1c0	java.lang.String	indexOf	(Ljava/lang/String;Ljava/lang/String;I)I	String.java
+0x1c8	java.lang.String	charAt	(I)C	String.java
+0x1b0	java.lang.String	contains	(Ljava/lang/CharSequence;)Z	String.java
+0x250	java.lang.String	hashCode	()I	String.java
+0x1b8	java.lang.String	indexOf	(Ljava/lang/String;)I	String.java
+0x1bc	java.lang.String	indexOf	(Ljava/lang/String;I)I	String.java
+0x1c4	java.lang.String	length	()I	String.java
+0x1b4	java.lang.String	toString	()Ljava/lang/String;	String.java
+0xcc	java.lang.Thread	currentThread	()Ljava/lang/Thread;	Thread.java
+0xe4	java.lang.ref.Reference	getReferent	()Ljava/lang/Object;	Reference.java
+0xe0	java.lang.ref.Reference	get	()Ljava/lang/Object;	Reference.java
+0x4	dalvik.system.VMDebug	startMethodTracing	(Ljava/lang/String;IIZI)V	VMDebug.java
+0	dalvik.system.VMDebug	startMethodTracingFilename	(Ljava/lang/String;IIZI)V	VMDebug.java
+0x2c0	dalvik.system.VMDebug	stopMethodTracing	()V	VMDebug.java
+0xa0	android.app.FragmentManagerImpl$1	<init>	(Landroid/app/FragmentManagerImpl;)V	FragmentManager.java
+0x74	android.app.ContextImpl	getApplicationInfo	()Landroid/content/pm/ApplicationInfo;	ContextImpl.java
+0x184	android.app.IActivityManager$Stub$Proxy	getActivityOptions	(Landroid/os/IBinder;)Landroid/os/Bundle;	IActivityManager.java
+0x138	android.app.Fragment	getActivity	()Landroid/app/Activity;	Fragment.java
+0x4c	android.app.Fragment	getAnimatingAway	()Landroid/animation/Animator;	Fragment.java
+0x90	android.app.Fragment	getChildFragmentManager	()Landroid/app/FragmentManager;	Fragment.java
+0x40	android.app.Fragment	getNextTransition	()I	Fragment.java
+0x44	android.app.Fragment	getNextTransitionStyle	()I	Fragment.java
+0x94	android.app.Fragment	instantiateChildFragmentManager	()V	Fragment.java
+0x218	android.app.Fragment	noteStateNotSaved	()V	Fragment.java
+0x12c	android.app.Fragment	onActivityCreated	(Landroid/os/Bundle;)V	Fragment.java
+0x120	android.app.Fragment	onCreateView	(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;	Fragment.java
+0x58	android.app.Fragment	onGetLayoutInflater	(Landroid/os/Bundle;)Landroid/view/LayoutInflater;	Fragment.java
+0x124	android.app.Fragment	performActivityCreated	(Landroid/os/Bundle;)V	Fragment.java
+0x118	android.app.Fragment	performCreateView	(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;	Fragment.java
+0x54	android.app.Fragment	performGetLayoutInflater	(Landroid/os/Bundle;)Landroid/view/LayoutInflater;	Fragment.java
+0x260	android.app.Application	collectActivityLifecycleCallbacks	()[Ljava/lang/Object;	Application.java
+0x25c	android.app.Application	dispatchActivityStarted	(Landroid/app/Activity;)V	Application.java
+0x180	android.util.Singleton	get	()Ljava/lang/Object;	Singleton.java
+0x200	android.view.Window	getFeatures	()I	Window.java
+0x1c	android.view.Window	getWindowStyle	()Landroid/content/res/TypedArray;	Window.java
+0x1fc	android.view.Window	hasFeature	(I)Z	Window.java
+0x5c	android.app.Activity$HostCallbacks	onGetLayoutInflater	()Landroid/view/LayoutInflater;	Activity.java
+0x6c	android.app.Activity$HostCallbacks	onUseFragmentManagerInflaterFactory	()Z	Activity.java
+0x238	android.app.FragmentHostCallback	doLoaderStart	()V	FragmentHostCallback.java
+0x13c	android.app.FragmentHostCallback	getActivity	()Landroid/app/Activity;	FragmentHostCallback.java
+0xb4	android.app.FragmentHostCallback	getContext	()Landroid/content/Context;	FragmentHostCallback.java
+0xe8	android.app.FragmentHostCallback	getHandler	()Landroid/os/Handler;	FragmentHostCallback.java
+0x23c	android.app.FragmentHostCallback	getLoaderManager	(Ljava/lang/String;ZZ)Landroid/app/LoaderManagerImpl;	FragmentHostCallback.java
+0x84	android.view.LayoutInflater	<init>	(Landroid/view/LayoutInflater;Landroid/content/Context;)V	LayoutInflater.java
+0x8c	android.view.LayoutInflater	setFilter	(Landroid/view/LayoutInflater$Filter;)V	LayoutInflater.java
+0x110	android.view.LayoutInflater	setPrivateFactory	(Landroid/view/LayoutInflater$Factory2;)V	LayoutInflater.java
+0x208	android.app.Instrumentation	postPerformCreate	(Landroid/app/Activity;)V	Instrumentation.java
+0x20c	android.app.Instrumentation	callActivityOnCreate	(Landroid/app/Activity;Landroid/os/Bundle;)V	Instrumentation.java
+0x220	android.app.Instrumentation	callActivityOnStart	(Landroid/app/Activity;)V	Instrumentation.java
+0x168	android.util.SparseArray	size	()I	SparseArray.java
+0x16c	android.util.SparseArray	valueAt	(I)Ljava/lang/Object;	SparseArray.java
+0x9c	android.app.FragmentManager	<init>	()V	FragmentManager.java
+0x70	android.content.ContextWrapper	getApplicationInfo	()Landroid/content/pm/ApplicationInfo;	ContextWrapper.java
+0x98	android.app.FragmentManagerImpl	<init>	()V	FragmentManager.java
+0x108	android.app.FragmentManagerImpl	burpActive	()V	FragmentManager.java
+0x2c	android.app.FragmentManagerImpl	dispatchMoveToState	(I)V	FragmentManager.java
+0xc0	android.app.FragmentManagerImpl	ensureExecReady	(Z)V	FragmentManager.java
+0xfc	android.app.FragmentManagerImpl	executePostponedTransaction	(Ljava/util/ArrayList;Ljava/util/ArrayList;)V	FragmentManager.java
+0x100	android.app.FragmentManagerImpl	generateOpsForPendingActions	(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z	FragmentManager.java
+0xac	android.app.FragmentManagerImpl	attachController	(Landroid/app/FragmentHostCallback;Landroid/app/FragmentContainer;Landroid/app/Fragment;)V	FragmentManager.java
+0x28	android.app.FragmentManagerImpl	dispatchActivityCreated	()V	FragmentManager.java
+0xb8	android.app.FragmentManagerImpl	dispatchCreate	()V	FragmentManager.java
+0x164	android.app.FragmentManagerImpl	dispatchOnFragmentActivityCreated	(Landroid/app/Fragment;Landroid/os/Bundle;Z)V	FragmentManager.java
+0x104	android.app.FragmentManagerImpl	doPendingDeferredStart	()V	FragmentManager.java
+0x50	android.app.FragmentManagerImpl	ensureInflatedFragmentView	(Landroid/app/Fragment;)V	FragmentManager.java
+0xbc	android.app.FragmentManagerImpl	execPendingActions	()Z	FragmentManager.java
+0x10c	android.app.FragmentManagerImpl	getLayoutInflaterFactory	()Landroid/view/LayoutInflater$Factory2;	FragmentManager.java
+0xb0	android.app.FragmentManagerImpl	getTargetSdk	()I	FragmentManager.java
+0x3c	android.app.FragmentManagerImpl	moveFragmentToExpectedState	(Landroid/app/Fragment;)V	FragmentManager.java
+0x30	android.app.FragmentManagerImpl	moveToState	(IZ)V	FragmentManager.java
+0x48	android.app.FragmentManagerImpl	moveToState	(Landroid/app/Fragment;IIIZ)V	FragmentManager.java
+0x11c	android.app.FragmentManagerImpl	noteStateNotSaved	()V	FragmentManager.java
+0x174	android.app.FragmentManagerImpl	performPendingDeferredStart	(Landroid/app/Fragment;)V	FragmentManager.java
+0x170	android.app.FragmentManagerImpl	startPendingDeferredFragments	()V	FragmentManager.java
+0x14	android.app.ActivityTransitionState	readState	(Landroid/os/Bundle;)V	ActivityTransitionState.java
+0x1f4	android.app.ActivityTransitionState	setEnterActivityOptions	(Landroid/app/Activity;Landroid/app/ActivityOptions;)V	ActivityTransitionState.java
+0x80	com.android.internal.policy.PhoneLayoutInflater	<init>	(Landroid/view/LayoutInflater;Landroid/content/Context;)V	PhoneLayoutInflater.java
+0x7c	com.android.internal.policy.PhoneLayoutInflater	cloneInContext	(Landroid/content/Context;)Landroid/view/LayoutInflater;	PhoneLayoutInflater.java
+0xec	android.os.Handler	getLooper	()Landroid/os/Looper;	Handler.java
+0x114	android.view.LayoutInflater$FactoryMerger	<init>	(Landroid/view/LayoutInflater$Factory;Landroid/view/LayoutInflater$Factory2;Landroid/view/LayoutInflater$Factory;Landroid/view/LayoutInflater$Factory2;)V	LayoutInflater.java
+0x240	android.util.ArrayMap	<init>	()V	ArrayMap.java
+0x244	android.util.ArrayMap	<init>	(IZ)V	ArrayMap.java
+0x248	android.util.ArrayMap	get	(Ljava/lang/Object;)Ljava/lang/Object;	ArrayMap.java
+0x254	android.util.ArrayMap	indexOf	(Ljava/lang/Object;I)I	ArrayMap.java
+0x24c	android.util.ArrayMap	indexOfKey	(Ljava/lang/Object;)I	ArrayMap.java
+0xc4	android.os.Looper	myLooper	()Landroid/os/Looper;	Looper.java
+0x24	android.app.FragmentController	dispatchActivityCreated	()V	FragmentController.java
+0x234	android.app.FragmentController	doLoaderStart	()V	FragmentController.java
+0x21c	android.app.FragmentController	execPendingActions	()Z	FragmentController.java
+0x214	android.app.FragmentController	noteStateNotSaved	()V	FragmentController.java
+0x1f0	android.app.ActivityOptions	fromBundle	(Landroid/os/Bundle;)Landroid/app/ActivityOptions;	ActivityOptions.java
+0xa8	android.app.FragmentContainer	<init>	()V	FragmentContainer.java
+0x78	android.app.LoadedApk	getApplicationInfo	()Landroid/content/pm/ApplicationInfo;	LoadedApk.java
+0x20	android.content.res.TypedArray	getBoolean	(IZ)Z	TypedArray.java
+0x1f8	com.android.internal.policy.PhoneWindow	getDecorView	()Landroid/view/View;	PhoneWindow.java
+0x68	com.android.internal.policy.PhoneWindow	getLayoutInflater	()Landroid/view/LayoutInflater;	PhoneWindow.java
+0x17c	android.app.ActivityManager	getService	()Landroid/app/IActivityManager;	ActivityManager.java
+0x1a8	android.os.BinderProxy	isMsgForGoogleLocation	(Landroid/os/Parcel;)Z	Binder.java
+0x19c	android.os.BinderProxy	transact	(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z	Binder.java
+0x1cc	android.os.BinderProxy	transactNative	(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z	Binder.java
+0x178	android.app.Activity	getActivityOptions	()Landroid/app/ActivityOptions;	Activity.java
+0x258	android.app.Activity	getApplication	()Landroid/app/Application;	Activity.java
+0x60	android.app.Activity	getLayoutInflater	()Landroid/view/LayoutInflater;	Activity.java
+0x64	android.app.Activity	getWindow	()Landroid/view/Window;	Activity.java
+0x230	android.app.Activity	onStart	()V	Activity.java
+0x204	android.app.Activity	performCreate	(Landroid/os/Bundle;)V	Activity.java
+0x18	android.app.Activity	performCreateCommon	()V	Activity.java
+0x210	android.app.Activity	performStart	()V	Activity.java
+0x1a0	android.os.Binder	checkParcel	(Landroid/os/IBinder;ILandroid/os/Parcel;Ljava/lang/String;)V	Binder.java
+0x1a4	android.os.Binder	isTracingEnabled	()Z	Binder.java
+0x1e4	android.os.Parcel	freeBuffer	()V	Parcel.java
+0x1e8	android.os.Parcel	nativeFreeBuffer	(J)J	Parcel.java
+0x1dc	android.os.Parcel	nativeReadInt	(J)I	Parcel.java
+0x190	android.os.Parcel	nativeWriteInterfaceToken	(JLjava/lang/String;)V	Parcel.java
+0x198	android.os.Parcel	nativeWriteStrongBinder	(JLandroid/os/IBinder;)V	Parcel.java
+0x188	android.os.Parcel	obtain	()Landroid/os/Parcel;	Parcel.java
+0x1ec	android.os.Parcel	updateNativeSize	(J)V	Parcel.java
+0x1ac	android.os.Parcel	getInterfaceName	()Ljava/lang/String;	Parcel.java
+0x1d0	android.os.Parcel	readException	()V	Parcel.java
+0x1d4	android.os.Parcel	readExceptionCode	()I	Parcel.java
+0x1d8	android.os.Parcel	readInt	()I	Parcel.java
+0x1e0	android.os.Parcel	recycle	()V	Parcel.java
+0x18c	android.os.Parcel	writeInterfaceToken	(Ljava/lang/String;)V	Parcel.java
+0x194	android.os.Parcel	writeStrongBinder	(Landroid/os/IBinder;)V	Parcel.java
+0xc	android.os.Debug	startMethodTracing	(Ljava/lang/String;)V	Debug.java
+0x8	android.os.Debug	startMethodTracing	(Ljava/lang/String;II)V	Debug.java
+0x2bc	android.os.Debug	stopMethodTracing	()V	Debug.java
+0x10	com.example.advanced.CartonActivity	onCreate	(Landroid/os/Bundle;)V	CartonActivity.java
+0x224	com.example.advanced.CartonActivity	onStart	()V	CartonActivity.java
+0x2a4	android.support.v7.app.AppCompatActivity	getDelegate	()Landroid/support/v7/app/AppCompatDelegate;	AppCompatActivity.java
+0x228	android.support.v7.app.AppCompatActivity	onStart	()V	AppCompatActivity.java
+0x140	android.support.v4.app.FragmentActivity	getLifecycle	()Landroid/arch/lifecycle/Lifecycle;	FragmentActivity.java
+0x22c	android.support.v4.app.FragmentActivity	onStart	()V	FragmentActivity.java
+0x144	android.support.v4.app.SupportActivity	getLifecycle	()Landroid/arch/lifecycle/Lifecycle;	ComponentActivity.java
+0x14c	android.arch.lifecycle.LifecycleRegistry	getStateAfter	(Landroid/arch/lifecycle/Lifecycle$Event;)Landroid/arch/lifecycle/Lifecycle$State;	LifecycleRegistry.java
+0x15c	android.arch.lifecycle.LifecycleRegistry	isSynced	()Z	LifecycleRegistry.java
+0x154	android.arch.lifecycle.LifecycleRegistry	moveToState	(Landroid/arch/lifecycle/Lifecycle$State;)V	LifecycleRegistry.java
+0x158	android.arch.lifecycle.LifecycleRegistry	sync	()V	LifecycleRegistry.java
+0x148	android.arch.lifecycle.LifecycleRegistry	handleLifecycleEvent	(Landroid/arch/lifecycle/Lifecycle$Event;)V	LifecycleRegistry.java
+0x160	android.arch.core.internal.SafeIterableMap	size	()I	SafeIterableMap.java
+0x27c	android.support.v4.app.FragmentHostCallback	getHandler	()Landroid/os/Handler;	FragmentHostCallback.java
+0x28c	android.support.v4.app.FragmentManagerImpl	burpActive	()V	FragmentManager.java
+0x26c	android.support.v4.app.FragmentManagerImpl	dispatchStateChange	(I)V	FragmentManager.java
+0x278	android.support.v4.app.FragmentManagerImpl	ensureExecReady	(Z)V	FragmentManager.java
+0x280	android.support.v4.app.FragmentManagerImpl	executePostponedTransaction	(Ljava/util/ArrayList;Ljava/util/ArrayList;)V	FragmentManager.java
+0x284	android.support.v4.app.FragmentManagerImpl	generateOpsForPendingActions	(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z	FragmentManager.java
+0x268	android.support.v4.app.FragmentManagerImpl	dispatchActivityCreated	()V	FragmentManager.java
+0x2a0	android.support.v4.app.FragmentManagerImpl	dispatchStart	()V	FragmentManager.java
+0x288	android.support.v4.app.FragmentManagerImpl	doPendingDeferredStart	()V	FragmentManager.java
+0x274	android.support.v4.app.FragmentManagerImpl	execPendingActions	()Z	FragmentManager.java
+0x270	android.support.v4.app.FragmentManagerImpl	moveToState	(IZ)V	FragmentManager.java
+0x294	android.support.v4.app.FragmentManagerImpl	noteStateNotSaved	()V	FragmentManager.java
+0x264	android.support.v4.app.FragmentController	dispatchActivityCreated	()V	FragmentController.java
+0x29c	android.support.v4.app.FragmentController	dispatchStart	()V	FragmentController.java
+0x298	android.support.v4.app.FragmentController	execPendingActions	()Z	FragmentController.java
+0x290	android.support.v4.app.FragmentController	noteStateNotSaved	()V	FragmentController.java
+0x2b4	android.support.v7.app.AppCompatDelegate	getDefaultNightMode	()I	AppCompatDelegate.java
+0x2b0	android.support.v7.app.AppCompatDelegateImpl	getNightMode	()I	AppCompatDelegateImpl.java
+0x2ac	android.support.v7.app.AppCompatDelegateImpl	applyDayNight	()Z	AppCompatDelegateImpl.java
+0x2b8	android.support.v7.app.AppCompatDelegateImpl	mapNightMode	(I)I	AppCompatDelegateImpl.java
+0x2a8	android.support.v7.app.AppCompatDelegateImpl	onStart	()V	AppCompatDelegateImpl.java
+0x134	android.arch.lifecycle.ReportFragment	dispatch	(Landroid/arch/lifecycle/Lifecycle$Event;)V	ReportFragment.java
+0x130	android.arch.lifecycle.ReportFragment	dispatchCreate	(Landroid/arch/lifecycle/ReportFragment$ActivityInitializationListener;)V	ReportFragment.java
+0x128	android.arch.lifecycle.ReportFragment	onActivityCreated	(Landroid/os/Bundle;)V	ReportFragment.java
+0xa4	android.app.Fragment$1	<init>	(Landroid/app/Fragment;)V	Fragment.java
+*end
+SLOW   R›˙gà                  @       i @      z @	   !   Å @   )   â @   0   ê @   A   ° @   J   ™ @   P   ∞ @   X   ∏ @   d   ƒ @    l   Ã @!   v   ÷ @$      ‡ @(   á   Ë @,   ê    @0   ô   ˘ @4   £    @5   ©   	 @8   ∞    @9   ∑    @<   ¿     @@   »   ( @A   œ   / @D   ’   5 @E   €   ; @H   ‰   D @L   Ô   P @M   ı   U @P   ˝   ] @Q     c @T     n @X     t @\     | @`   %  Ö @d   ,  å @e   1  ë @h   8  ò @i   ?  ü @a   D  § @l   J  ´ @p   Q  ± @t   [  ª @x   b  √ @y   h  … @u   n  Œ @q   s  ” @m   z  ⁄ @|   Å  · @Ä   â  È @Ñ   ë  Ò @à   ó  ˜ @â   ú  ¸ @å   ß   @ç   ¨   @Ö   ≤   @Å   ∑   @}   º   @]   ¡  ! @l   »  ( @p   Œ  / @t   ‘  4 @x   ⁄  : @y   ‡  @ @u   Ê  F @q   Î  K @m   Ò  Q @ê   ˜  W @î   ˛  ^ @ò     e @ú     k @à     q @â     v @ù     { @†   #  É @à   *  ä @â   /  è @°   4  î @ô   :  ö @§   H  ® @®   O  Ø @à   U  µ @â   Z  ∫ @©   _  ø @•   e  ≈ @¨   k  Ã @∞   s  ” @¥   {  € @µ   Å  ‚ @p   á  Á @t   ç  Ì @x   î  Ù @y   ô  ˘ @u   û  ˛ @q   £   @±   ©  	 @≠   ∞   @ï   µ   @∏   º   @,   ¬  " @0   »  ( @1   Œ  / @º   ’  5 @¿   „  C @ƒ   Î  L @»   Ù  T @Ã     e @Õ     s @–     { @—   !  Å @‘   (  à @ÿ   /  è @‹   5  ï @›   ;  õ @‡   D  § @‰   O  Ø @Â   Z  ∫ @·   `  ¿ @Ÿ   e  ∆ @’   k  À @…   q  — @≈   v  ÷ @Ë   |  › @È   Ç  ‚ @Ï   â  Í @Ì   ê   @   ò  ¯ @Ù   ü  ˇ @¯   ¶   @à   ¨   @â   ±   @˘   ∂   @ı   Ω   @Ò   √  # @   …  * @Ù   œ  / @¯   ‘  4 @à   ⁄  : @â   ﬂ  ? @˘   ‰  D @ı   È  J @Ò   Ô  O @¸   ˜  W @˝   ˝  ^ @¡     c @   
+  j @    s @    y @     Ä @  &  Ü @	  ,  å @Ω   1  ë @-   6  ñ @π   ;  õ @ë   A  ° @  G  ß @  L  ≠ @  S  ≥ @  _  ø @à   e  ≈ @â   j    @  s  ” @  x  ÿ @Y   ~  ﬁ @U   Ö  Ê @  å  Ì @  ì  Û @  ô  ˘ @   †   @!  ¶   @  ´   @$  ≥   @  π   @  ø   @(  ∆  & @,  œ  / @-  ‘  5 @0  €  ; @1  ·  A @4  Á  H @8  Ó  N @<  Ù  T @=  ˙  Z @9  ˇ  _ @@    k @D    | @E  !  Å @A  &  Ü @H  .  é @L  4  î @P  ;  õ @Q  A  ¢ @M  H  ® @T  N  Æ @X  U  ∂ @‡   ]  Ω @‰   f  ∆ @Â   p  – @·   v  ÷ @\  |  ‹ @`  É  „ @a  ä  Í @]  è  Ô @Y  ï  ı @U  ö  ˙ @I  ü  ˇ @5  •   @)  ™  	 @(   ±   @,   ∂   @0   º   @1   √  # @º   …  ) @¿   Œ  . @ƒ   ‘  4 @»   ⁄  : @Ã   „  C @Õ   Ï  L @–   Ú  S @—   ¯  X @‘   ˛  ^ @ÿ     d @‹   	  i @›     n @‡     u @‰     } @Â   '  á @·   -  ç @Ÿ   2  í @’   7  ó @…   =  ù @≈   B  ¢ @Ë   H  ® @È   N  Æ @Ï   T  ¥ @Ì   Z  ∫ @¸   `  ¿ @˝   f  ∆ @¡   k  À @   q  — @  w  ◊ @  }  › @  Ç  „ @  à  Ë @	  ç  Ì @Ω   ì  Û @-   ò  ¯ @)   ù  ˝ @%  ¢   @d  ©  	 @e  Ø   @I   ∑   @=   æ   @h  ∆  & @i  Õ  . @l  ‘  4 @m  ⁄  : @p  ·  A @h  Ë  H @i  Ì  M @l  Ù  U @m  ˙  Z @t     ` @u    f @h    l @i    q @q    w @1     } @º   #  É @¿   )  â @ƒ   /  è @»   4  î @Ã   =  ù @Õ   F  ¶ @–   M  ≠ @—   R  ≤ @‘   X  ∏ @ÿ   ]  Ω @‹   c  √ @›   h  » @‡   o  œ @‰   w  ◊ @Â   Ä  ‡ @·   Ö  Ê @Ÿ   ã  Î @’   ê   @…   ñ  ˆ @≈   õ  ˚ @Ë   °   @È   ß   @Ï   ≠   @Ì   ≤   @¸   π   @˝   æ   @¡   √  $ @      * @4   —  1 @5   ÷  6 @  ‹  < @  ‚  B @  Á  G @  Ì  M @h  Û  S @i  ¯  X @l  ˛  ^ @m    d @	  
+  j @Ω     o @-     t @)     y @%     ~ @x  &  Ü @|  -  ç @Ä  5  ï @Å  <  ú @}  B  ¢ @Ñ  N  Æ @à  W  ∑ @â  _  ø @à  e  ≈ @â  k  À @å  s  ” @ê  Ä  ‡ @ë  ¢   @ç  ®  	 @î  Ø   @ò  π   @ô  ›  = @ï  „  C @ú  Ò  Q @†  ¯  Y @°  ˛  ^ @§  	  d @•  	  k @®  	  q @¨  	  x @≠  	  ~ @¨  $	  Ñ @≠  )	  â @∞  0	  ê @¥  :	  ö @µ  ?	  ü @∏  F	  ¶ @º  L	  ¨ @¿  R	  ≥ @ƒ  Y	  π @≈  _	  ¿ @ƒ  e	  ≈ @≈  k	  À @»  v	  ÷ @…  	  ﬂ @¡  Ö	  Ê @Ω  ã	  Î @π  ê	   @±  ï	  ı @©  õ	  ˚ @Ã  ß	   @Õ  4
+   @ù  =
+  Ü @–  F
+  è @‘  M
+  ó @ÿ  S
+  ù @‹  `
+  ™ @›  j
+  ¥ @Ÿ  p
+  ∫ @’  v
+  ¿ @—  |
+  ∆ @ÿ  Å
+  À @‹  ä
+  ‘ @›  í
+  ‹ @Ÿ  ò
+  ‚ @‡  †
+  È @‰  ¶
+   @Ë  ±
+  ˚ @È  ª
+   @Ï  ¬
+   @Ì   
+   @Â  œ
+   @·  ÿ
+  " @‡  ﬁ
+  ' @‰  „
+  - @Ë  Ï
+  6 @È  ˘
+  B @Ï  ˇ
+  I @Ì    O @Â  
+  T @·    \ @Ö    a @    i @Ò  %  o @y  *  t @Ù  2  | @d   8  Ç @e   >  à @¯  E  è @˘  L  ñ @¸  R  ú @   X  ¢ @  `  © @˝  f  Ø @ı  k  µ @   p  ∫ @  v  ø @  ~  » @	  Ü  – @  ã  ’ @  ó  · @x  û  Á @|  £  Ì @Ä  ™  Ù @Å  ∞  ˙ @}  ∑   @Ñ  ¿  
+ @à  ∆   @â  Ã   @à  “   @â  Ÿ  " @å  ‡  * @ê  Í  4 @ë  ¸  F @ç    L @î  	  S @ò    \ @ô  '  q @ï  -  w @ú  8  Ç @†  >  à @°  C  ç @§  I  ì @•  P  ô @®  V  ü @¨  \  • @≠  a  ´ @¨  g  ± @≠  l  ∂ @∞  s  Ω @¥  |  ≈ @µ  Ä    @∏  Ü  – @º  å  ÷ @¿  í  ‹ @ƒ  ò  ‚ @≈  û  Ë @ƒ  §  Ó @≈  ©  Û @»  ≥  ˝ @…  º   @¡  ¬   @Ω  «   @π  Ã   @±  “   @©  ◊  ! @Ã  ‡  * @Õ  "  ı @ù  )  ¸ @–  1    @‘  6  
+  @ÿ  <    @‹  H    @›  P  #  @Ÿ  V  )  @’  \  /  @—  a  5  @ÿ  g  :  @‹  p  C  @›  x  K  @Ÿ  }  P  @‡  É  W  @‰  ä  ]  @Ë  ì  f  @È  ú  o  @Ï  ¢  v  @Ì  ©  |  @Â  Æ  Å  @·  ∂  â  @‡  º  è  @‰  ¡  î  @Ë     ù  @È  ÷  ©  @Ï  ‹  Ø  @Ì  ‚  µ  @Â  Á  ∫  @·  Ó  ¡  @Ö  Û  ∆  @  ˘  Ã  @Ò  ˛  —  @y    ÷  @Ù  	  ›  @d     ‚  @e     Á  @¯    Ô  @˘  "  ı  @¸  (  ˚  @   -  ! @  3  ! @˝  8  ! @ı  >  ! @  E  ! @  M   ! @4   T  '! @5   Y  ,! @8   `  3! @9   f  9! @  m  @! @  t  G! @  z  M! @    R! @  Ñ  W! @  â  \! @  ë  e! @º   ò  k! @¿   °  t! @ƒ   ß  z! @»   ≠  Ä! @Ã   ∏  ã! @Õ   ƒ  ó! @–      ù! @—   –  £! @‘   ÷  ©! @ÿ   ‹  Ø! @‹   ·  µ! @›   Á  ∫! @‡   Ó  ¬! @‰   ˜   ! @Â      ‘! @·     Ÿ! @Ÿ     ﬂ! @’     ‰! @…     È! @≈     Ô! @Ë   #  ˆ! @È   (  ˚! @Ï   .  " @Ì   4  " @¸   ;  " @˝   @  " @¡   F  " @   L  " @4   S  &" @5   X  +" @  ]  0" @  c  6" @  i  <" @  o  C" @h  v  I" @i  {  N" @l  Ç  U" @m  à  [" @	  ç  `" @Ω   í  f" @  ó  k" @   †  t" @$  ®  |" @(  Ω  ê" @,  ƒ  ó" @0  À  û" @4  “  •" @8  ÿ  ´" @<  ·  ¥" @@  Í  Ω" @D    √" @à   ˆ  …" @â   ˚  œ" @E    ‚" @A    Á" @H    Ó" @L     Ù" @P  '  ˙" @ƒ  /  # @≈  4  # @Q  9  # @T  ?  # @U  E  # @M  J  # @I  O  ## @=  U  (# @9  [  .# @5  `  3# @X  e  9# @Y  k  ># @\  r  E# @`  x  K# @4     S# @5   Ñ  X# @a  ä  ]# @]  è  b# @1  î  g# @d  ù  p# @h  §  w# @l  ¨  # @p  ≤  Ö# @q  ∫  ç# @t  ¿  ì# @x  ∆  ô# @ƒ   Ã  ü# @»   “  •# @Ã   €  Æ# @Õ   „  ∑# @–   Í  Ω# @—   Ô  ¬# @‘   Ù  «# @ÿ   ˙  Õ# @‹   ˇ  “# @›     ◊# @‡   
+  ﬁ# @‰     Ê# @Â     Ô# @·   !  Ù# @Ÿ   &  ˘# @’   +  ˛# @…   0  $ @≈   5  $ @|  ;  $ @}  A  $ @Ï   F  $ @Ì   L  $ @Ä  R  %$ @Å  Y  ,$ @y  ^  1$ @Ñ  d  7$ @Ö  j  >$ @à  p  C$ @â  v  I$ @å  {  O$ @ç  Å  T$ @u  Ü  Y$ @m  ä  ]$ @i  è  b$ @e  ì  f$ @ê  ö  m$ @î  †  s$ @4   ß  {$ @5   ¨  Ä$ @ï  ≤  Ö$ @ë  ∑  ä$ @ò  Ω  ê$ @t  √  ñ$ @x  »  ú$ @ƒ   Œ  ¢$ @»   ‘  ß$ @Ã   ‹  Ø$ @Õ   ‰  ∑$ @–   Í  Ω$ @—   Ô  √$ @‘   ı  »$ @ÿ   ˙  Õ$ @‹   ˇ  “$ @›     ◊$ @‡   
+  ﬁ$ @‰     Ê$ @Â     Ó$ @·      Û$ @Ÿ   %  ¯$ @’   *  ˝$ @…   /  % @≈   4  % @|  :  % @}  ?  % @Ï   D  % @Ì   I  % @Ä  O  #% @Å  U  (% @y  Z  -% @Ñ  _  3% @Ö  e  8% @à  k  >% @â  p  C% @å  u  H% @ç  z  M% @u    R% @ô  Ñ  W% @ú  â  ]% @†  ê  c% @l  ñ  i% @p  ú  o% @q  ¢  u% @t  ß  z% @x  ¨  Ä% @ƒ   ≤  Ü% @»   ∏  ã% @Ã   ¿  ì% @Õ   »  õ% @–   Œ  °% @—   ”  ¶% @‘   Ÿ  ¨% @ÿ   ﬁ  ±% @‹   „  ∑% @›   Ë  º% @‡   Ô  ¬% @‰   ˜   % @Â     % @·     ˆ% @Ÿ     ˚% @’      & @…     & @≈      & @|  &  & @}  +  & @Ï   0  & @Ì   5  & @Ä  ;  && @Å  A  +& @y  F  0& @Ñ  L  6& @Ö  Q  ;& @à  V  @& @â  [  F& @å  `  K& @ç  f  P& @u  k  U& @m  o  Y& @°  t  ^& @ù  x  b& @-  }  g& @§  É  m& @•  â  s& @®  è  y& @¨  ñ  Ä& @∞  ú  Ü& @¥  £  ç& @µ  ©  ì& @±  Æ  ò& @∏  ¥  û& @π  π  £& @≠  ø  ©& @©  ƒ  Æ& @)  »  ≤& @º  ›  «& @¿  È  ”& 

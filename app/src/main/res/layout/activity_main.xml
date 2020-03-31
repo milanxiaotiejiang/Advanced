@@ -28,5 +28,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="内存" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="启动" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

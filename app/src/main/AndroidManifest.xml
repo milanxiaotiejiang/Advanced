@@ -66,16 +66,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".memory.MemoryActivity" />
-        <activity android:name=".crash.CrashActivity" />
-        <activity android:name=".carton.CartonActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".start.StartActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.SwipeBack.Fullscreen.lanucher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".memory.MemoryActivity" />
+        <activity android:name=".crash.CrashActivity" />
+        <activity android:name=".carton.CartonActivity" />
+        <activity android:name=".MainActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -86,6 +90,12 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <activity
+            android:name=".start.LoadMultiDexActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:process=":multi_dex" />
     </application>
 
 </manifest>

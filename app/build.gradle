@@ -100,10 +100,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     implementation 'com.github.markzhai:blockcanary-android:1.5.0'
     // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
     debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
     releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+
     //aop
     implementation 'org.aspectj:aspectjrt:1.9.4'
     implementation 'me.weishu:epic:0.6.0'
@@ -120,6 +127,9 @@ dependencies {
 
     implementation 'com.squareup.haha:haha:2.1'
 
+    //x2c框架
+    implementation 'com.zhangyue.we:x2c-lib:1.0.6'
+    annotationProcessor 'com.zhangyue.we:x2c-apt:1.1.2'
 
 }
 

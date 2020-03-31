@@ -24,9 +24,9 @@ android {
                 includeCompileClasspath = true
             }
         }
-        ndk {
-            abiFilters 'armeabi-v7a'
-        }
+//        ndk {
+//            abiFilters 'armeabi-v7a'
+//        }
     }
 
     dexOptions {
@@ -68,7 +68,10 @@ android {
 //        //排除所有package路径中包含`android.support`的class文件及库（jar文件）
 //        exclude 'android.support'
 //    }
-
+//    aspectjx {
+//        //关闭AspectJX功能
+//        enabled false
+//    }
 }
 
 dependencies {
@@ -105,50 +108,52 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     //log日志库
     implementation 'com.seabreezerobot:LogLibrary:v1.0.0'
+
+//    implementation 'com.tencent.mm.hardcoder:app2sys:1.0.0'
 }
 
-import org.aspectj.bridge.IMessage
-import org.aspectj.bridge.MessageHandler
-import org.aspectj.tools.ajc.Main
-
-final def log = project.logger
-final def variants = project.android.applicationVariants
-variants.all { variant ->
-    if (!variant.buildType.isDebuggable()) {
-        log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
-        return
-    }
-
-    JavaCompile javaCompile = variant.javaCompiler
-    javaCompile.doLast {
-        String[] args = ["-showWeaveInfo",
-                         "-1.8",
-                         "-inpath", javaCompile.destinationDir.toString(),
-                         "-aspectpath", javaCompile.classpath.asPath,
-                         "-d", javaCompile.destinationDir.toString(),
-                         "-classpath", javaCompile.classpath.asPath,
-                         "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
-        log.debug "ajc args: " + Arrays.toString(args)
-
-        MessageHandler handler = new MessageHandler(true)
-        new Main().run(args, handler)
-        for (IMessage message : handler.getMessages(null, true)) {
-            switch (message.getKind()) {
-                case IMessage.ABORT:
-                case IMessage.ERROR:
-                case IMessage.FAIL:
-                    log.error message.message, message.thrown
-                    break
-                case IMessage.WARNING:
-                    log.warn message.message, message.thrown
-                    break
-                case IMessage.INFO:
-                    log.info message.message, message.thrown
-                    break
-                case IMessage.DEBUG:
-                    log.debug message.message, message.thrown
-                    break
-            }
-        }
-    }
-}
+//import org.aspectj.bridge.IMessage
+//import org.aspectj.bridge.MessageHandler
+//import org.aspectj.tools.ajc.Main
+//
+//final def log = project.logger
+//final def variants = project.android.applicationVariants
+//variants.all { variant ->
+//    if (!variant.buildType.isDebuggable()) {
+//        log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
+//        return
+//    }
+//
+//    JavaCompile javaCompile = variant.javaCompiler
+//    javaCompile.doLast {
+//        String[] args = ["-showWeaveInfo",
+//                         "-1.8",
+//                         "-inpath", javaCompile.destinationDir.toString(),
+//                         "-aspectpath", javaCompile.classpath.asPath,
+//                         "-d", javaCompile.destinationDir.toString(),
+//                         "-classpath", javaCompile.classpath.asPath,
+//                         "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
+//        log.debug "ajc args: " + Arrays.toString(args)
+//
+//        MessageHandler handler = new MessageHandler(true)
+//        new Main().run(args, handler)
+//        for (IMessage message : handler.getMessages(null, true)) {
+//            switch (message.getKind()) {
+//                case IMessage.ABORT:
+//                case IMessage.ERROR:
+//                case IMessage.FAIL:
+//                    log.error message.message, message.thrown
+//                    break
+//                case IMessage.WARNING:
+//                    log.warn message.message, message.thrown
+//                    break
+//                case IMessage.INFO:
+//                    log.info message.message, message.thrown
+//                    break
+//                case IMessage.DEBUG:
+//                    log.debug message.message, message.thrown
+//                    break
+//            }
+//        }
+//    }
+//}

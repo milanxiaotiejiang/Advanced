@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.advanced.carton.CartonActivity;
+import com.example.advanced.crash.CrashActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import io.reactivex.disposables.Disposable;
@@ -37,9 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ).subscribe(new Consumer<Boolean>() {
             @Override
             public void accept(Boolean aBoolean) throws Exception {
-                if(aBoolean){
+                if (aBoolean) {
                     Log.d("MainActivity", "正常");
-                }else {
+                } else {
                     Log.d("MainActivity", "未授权权限，部分功能不能使用");
                 }
             }
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button carton = findViewById(R.id.btn_carton);
         carton.setOnClickListener(this);
+        Button crash = findViewById(R.id.btn_crash);
+        crash.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_carton:
                 startActivity(new Intent(this, CartonActivity.class));
+                break;
+            case R.id.btn_crash:
+                startActivity(new Intent(this, CrashActivity.class));
                 break;
         }
     }

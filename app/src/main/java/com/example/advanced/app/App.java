@@ -3,7 +3,6 @@ package com.example.advanced.app;
 import androidx.multidex.MultiDexApplication;
 
 import com.example.advanced.BuildConfig;
-import com.github.moduth.blockcanary.BlockCanary;
 import com.robot.seabreeze.log.Logger;
 import com.robot.seabreeze.log.inner.LogcatTree;
 
@@ -32,7 +31,10 @@ public class App extends MultiDexApplication {
             Logger.plant(new LogcatTree());
         }
         // 在主进程初始化调用哈
-        BlockCanary.install(this, new AppBlockCanaryContext()).start();
+//        BlockCanary.install(this, new AppBlockCanaryContext()).start();
+
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(getApplicationContext());
 
     }
 }

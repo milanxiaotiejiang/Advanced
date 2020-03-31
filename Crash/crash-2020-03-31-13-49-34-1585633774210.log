@@ -1,0 +1,47 @@
+BOARD=msm8996
+CPU_ABI2=
+HOST=SWDH7018
+versionName=1.0
+IS_TREBLE_ENABLED=false
+SUPPORTED_64_BIT_ABIS=[Ljava.lang.String;@7992a1d
+CPU_ABI=arm64-v8a
+PERMISSIONS_REVIEW_REQUIRED=false
+IS_USERDEBUG=false
+DISPLAY=R16NW.G9300ZCS5CTA1
+SUPPORTED_ABIS=[Ljava.lang.String;@679f492
+FINGERPRINT=samsung/heroqltezc/heroqltechn:8.0.0/R16NW/G9300ZCS5CTA1:user/release-keys
+PRODUCT=heroqltezc
+ID=R16NW
+TYPE=user
+SERIAL=00819420
+IS_CONTAINER=false
+IS_ENG=false
+DEVICE=heroqltechn
+TIME=1577956620000
+IS_USER=true
+MODEL=SM-G9308
+MANUFACTURER=samsung
+USER=dpi
+versionCode=1
+BRAND=samsung
+SUPPORTED_32_BIT_ABIS=[Ljava.lang.String;@a82e2f4
+HARDWARE=qcom
+IS_DEBUGGABLE=false
+BOOTLOADER=G9300ZCS5CTA1
+RADIO=unknown
+TAG=Build
+UNKNOWN=unknown
+IS_EMULATOR=false
+TAGS=release-keys
+java.lang.RuntimeException: CrashActivity
+	at com.example.advanced.crash.CrashActivity$1.onClick(CrashActivity.java:19)
+	at android.view.View.performClick(View.java:6897)
+	at android.widget.TextView.performClick(TextView.java:12693)
+	at android.view.View$PerformClick.run(View.java:26101)
+	at android.os.Handler.handleCallback(Handler.java:789)
+	at android.os.Handler.dispatchMessage(Handler.java:98)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6944)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:327)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1374)

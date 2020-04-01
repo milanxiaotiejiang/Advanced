@@ -16,6 +16,7 @@ import com.example.advanced.app.task.InitBlockTask;
 import com.example.advanced.app.task.InitDBTask;
 import com.example.advanced.app.task.InitDexposedBridgeTask;
 import com.example.advanced.app.task.InitLeakTask;
+import com.example.advanced.app.task.InitNetworkTask;
 import com.example.advanced.app.task.InitToastTask;
 import com.example.advanced.launchstarter.TaskDispatcher;
 import com.example.advanced.shared.SharedPreferencesHelper;
@@ -78,6 +79,7 @@ public class App extends MultiDexApplication {
                 .addTask(new InitToastTask())
                 .addTask(new InitDBTask())
                 .addTask(new InitDexposedBridgeTask())
+                .addTask(new InitNetworkTask())
                 .start();
 
         //假设数据库初始化需要完成，needWait为true

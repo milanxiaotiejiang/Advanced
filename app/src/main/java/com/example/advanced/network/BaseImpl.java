@@ -38,7 +38,7 @@ public class BaseImpl<Service> {
 
         // 配置 Retrofit
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(Constants.API_YOUTU_BASE)                         // 设置 base url
+                .baseUrl(Constants.API_LIBRARY_BASE)                         // 设置 base url
                 .client(OkhttpManager.getInstance().getOkhttpClient())                                     // 设置 client
                 .addConverterFactory(GsonConverterFactory.create()) // 设置 Json 转换工具
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

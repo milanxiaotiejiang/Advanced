@@ -15,5 +15,5 @@ public class Constants {
 
     public static final String H_NAME = "H_NAME";
 
-    public static final String API_YOUTU_BASE = "";
+    public final static String API_LIBRARY_BASE = "http://47.104.142.138:8081/";
 }

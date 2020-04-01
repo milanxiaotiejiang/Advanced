@@ -13,13 +13,13 @@ public class ThreadMethodHook extends XC_MethodHook {
     protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
         super.beforeHookedMethod(param);
         Thread t = (Thread) param.thisObject;
-        Logger.e("thread:" + t + ", started..");
+        Logger.d("ThreadMethodHook:" + t + ", started..");
     }
 
     @Override
     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
         super.afterHookedMethod(param);
         Thread t = (Thread) param.thisObject;
-        Logger.e("thread:" + t + ", exit..");
+        Logger.d("ThreadMethodHook:" + t + ", exit..");
     }
 }

@@ -73,7 +73,7 @@ public class SocketActivity extends AppCompatActivity {
                         .subscribe(new Consumer<String>() {
                             @Override
                             public void accept(String s) throws Exception {
-                                Logger.e(s);
+                                Logger.d(s);
                             }
                         }, new Consumer<Throwable>() {
                             @Override

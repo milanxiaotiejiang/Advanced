@@ -86,7 +86,7 @@ public class CartonActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         processCpuTracker.update();
-                        Logger.e(processCpuTracker.printCurrentState(SystemClock.uptimeMillis()));
+                        Logger.d(processCpuTracker.printCurrentState(SystemClock.uptimeMillis()));
                     }
                 }, 5000);
 

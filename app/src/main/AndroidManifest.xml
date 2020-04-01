@@ -66,7 +66,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".network.SocketActivity"></activity>
+        <activity android:name=".electric.ElectricActivity"></activity>
+        <activity android:name=".network.SocketActivity" />
         <activity android:name=".shared.SharedActivity" />
         <activity android:name=".thread.ThreadActivity" />
         <activity android:name=".start.StartActivity" />

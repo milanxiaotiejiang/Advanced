@@ -46,10 +46,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="shared" />
+
         <Button
             android:id="@+id/btn_network"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="网络" />
+
+        <Button
+            android:id="@+id/btn_electric"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="电量" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

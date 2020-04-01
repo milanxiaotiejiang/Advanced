@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.advanced.carton.CartonActivity;
 import com.example.advanced.crash.CrashActivity;
+import com.example.advanced.electric.ElectricActivity;
 import com.example.advanced.memory.MemoryActivity;
 import com.example.advanced.network.SocketActivity;
 import com.example.advanced.shared.SharedActivity;
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         shared.setOnClickListener(this);
         Button network = findViewById(R.id.btn_network);
         network.setOnClickListener(this);
+        Button electric = findViewById(R.id.btn_electric);
+        electric.setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +93,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_network:
                 startActivity(new Intent(this, SocketActivity.class));
+                break;
+            case R.id.btn_electric:
+                startActivity(new Intent(this, ElectricActivity.class));
                 break;
         }
     }

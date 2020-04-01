@@ -61,11 +61,11 @@ public class ImageHook extends XC_MethodHook {
     }
 
     private static void warn(int bitmapWidth, int bitmapHeight, int viewWidth, int viewHeight, Throwable t) {
-        String warnInfo = "Bitmap size too large: " +
+        String warnInfo = "ImageHook Bitmap size too large: " +
                 "\n real size: (" + bitmapWidth + ',' + bitmapHeight + ')' +
                 "\n desired size: (" + viewWidth + ',' + viewHeight + ')' +
                 "\n call stack trace: \n" + Log.getStackTraceString(t) + '\n';
 
-        Logger.e(warnInfo);
+        Logger.d(warnInfo);
     }
 }

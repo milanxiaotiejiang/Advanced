@@ -214,7 +214,7 @@ public class ProcessCpuTracker {
             File[] threadsProcFiles = new File(mCurrentProcStat.threadsDir).listFiles();
             for (File thread : threadsProcFiles) {
                 int threadID = Integer.parseInt(thread.getName());
-                Logger.e("threadId:" + threadID);
+                Logger.d("threadId:" + threadID);
                 Stats threadStat = findThreadStat(threadID, mCurrentProcStat.workingThreads);
                 if (threadStat == null) {
                     threadStat = new Stats(threadID, true);

@@ -100,6 +100,10 @@
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:process=":multi_dex" />
+
+        <service
+            android:name=".electric.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>

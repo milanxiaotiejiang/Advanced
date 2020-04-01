@@ -72,6 +72,7 @@ public class App extends MultiDexApplication {
         dispatcher
                 .addTask(new InitLeakTask())
                 .addTask(new InitBlockTask())
+//                .addTask(new InitStethoTask())
 //                .addTask(new InitCrashTask())
                 .addTask(new InitAutoSizeTask())
                 .addTask(new InitToastTask())

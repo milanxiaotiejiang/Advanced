@@ -40,5 +40,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="线程" />
+
+        <Button
+            android:id="@+id/btn_shared"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="shared" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

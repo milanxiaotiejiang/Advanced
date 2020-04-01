@@ -2,6 +2,7 @@ package com.example.advanced.app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -17,11 +18,14 @@ import com.example.advanced.app.task.InitDexposedBridgeTask;
 import com.example.advanced.app.task.InitLeakTask;
 import com.example.advanced.app.task.InitToastTask;
 import com.example.advanced.launchstarter.TaskDispatcher;
+import com.example.advanced.shared.SharedPreferencesHelper;
+import com.example.advanced.shared.SharedPreferencesImpl;
 import com.example.advanced.start.LoadMultiDexActivity;
 import com.robot.seabreeze.log.Logger;
 import com.robot.seabreeze.log.inner.LogcatTree;
 
 import java.io.File;
+import java.util.HashMap;
 
 import static com.example.advanced.utils.Utils.isMainProcess;
 import static com.example.advanced.utils.Utils.isVMMultidexCapable;
@@ -80,6 +84,33 @@ public class App extends MultiDexApplication {
 
     }
 
+    private static final HashMap<String, SharedPreferencesImpl> sSharedPrefs = new HashMap<String, SharedPreferencesImpl>();
+
+    @Override
+    public SharedPreferences getSharedPreferences(String name, int mode) {
+        if (!SharedPreferencesHelper.canUseCustomSp()) {
+            return super.getSharedPreferences(name, mode);
+        }
+        SharedPreferencesImpl sp;
+        synchronized (sSharedPrefs) {
+            sp = sSharedPrefs.get(name);
+            if (sp == null) {
+                File prefsFile = SharedPreferencesHelper.getSharedPrefsFile(this, name);
+                sp = new SharedPreferencesImpl(prefsFile, mode);
+                sSharedPrefs.put(name, sp);
+                return sp;
+            }
+        }
+
+        if ((mode & Context.MODE_MULTI_PROCESS) != 0) {
+            // If somebody else (some other process) changed the prefs
+            // file behind our back, we reload it.  This has been the
+            // historical (if undocumented) behavior.
+            sp.startReloadIfChangedUnexpectedly();
+        }
+
+        return sp;
+    }
 
     private void initLogger(@NonNull Context context) {
         if (BuildConfig.DEBUG) {

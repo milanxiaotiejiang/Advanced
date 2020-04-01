@@ -24,9 +24,9 @@ android {
                 cppFlags
             }
         }
-        ndk{
+        ndk {
             moduleName "threadHook-lib"
-            abiFilters "x86","armeabi-v7a"
+            abiFilters "x86", "armeabi-v7a"
         }
 
         javaCompileOptions {

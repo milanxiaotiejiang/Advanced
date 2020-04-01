@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.advanced.carton.CartonActivity;
 import com.example.advanced.crash.CrashActivity;
 import com.example.advanced.memory.MemoryActivity;
+import com.example.advanced.shared.SharedActivity;
 import com.example.advanced.start.StartActivity;
 import com.example.advanced.thread.ThreadActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         start.setOnClickListener(this);
         Button thread = findViewById(R.id.btn_thread);
         thread.setOnClickListener(this);
+        Button shared = findViewById(R.id.btn_shared);
+        shared.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_thread:
                 startActivity(new Intent(this, ThreadActivity.class));
+                break;
+            case R.id.btn_shared:
+                startActivity(new Intent(this, SharedActivity.class));
                 break;
         }
     }

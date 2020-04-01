@@ -13,6 +13,7 @@ import com.example.advanced.carton.CartonActivity;
 import com.example.advanced.crash.CrashActivity;
 import com.example.advanced.memory.MemoryActivity;
 import com.example.advanced.start.StartActivity;
+import com.example.advanced.thread.ThreadActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import io.reactivex.disposables.Disposable;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         memory.setOnClickListener(this);
         Button start = findViewById(R.id.btn_start);
         start.setOnClickListener(this);
+        Button thread = findViewById(R.id.btn_thread);
+        thread.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_start:
                 startActivity(new Intent(this, StartActivity.class));
+                break;
+            case R.id.btn_thread:
+                startActivity(new Intent(this, ThreadActivity.class));
                 break;
         }
     }

@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-//apply plugin: 'android-aspectjx'
+apply plugin: 'android-aspectjx'
 //或者这样也可以
 //apply plugin: 'com.hujiang.android-aspectjx'
 
@@ -19,11 +19,15 @@ android {
         flavorDimensions "1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-//        externalNativeBuild {
-//            cmake {
-//                abiFilters "armeabi-v7a", "x86"
-//            }
-//        }
+        externalNativeBuild {
+            cmake {
+                cppFlags
+            }
+        }
+        ndk{
+            moduleName "threadHook-lib"
+            abiFilters "x86","armeabi-v7a"
+        }
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -67,11 +71,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-//    externalNativeBuild {
-//        cmake {
-//            path "src/main/cpp/CMakeLists.txt"
-//        }
-//    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
 
 
 //    aspectjx {
@@ -112,7 +116,7 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
 
     //aop
-    implementation 'org.aspectj:aspectjrt:1.9.4'
+//    implementation 'org.aspectj:aspectjrt:1.9.4'
     implementation 'me.weishu:epic:0.6.0'
     //权限
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'

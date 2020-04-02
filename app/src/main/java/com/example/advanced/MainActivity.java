@@ -17,6 +17,7 @@ import com.example.advanced.network.SocketActivity;
 import com.example.advanced.shared.SharedActivity;
 import com.example.advanced.start.StartActivity;
 import com.example.advanced.thread.ThreadActivity;
+import com.example.advanced.ui.UIActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import io.reactivex.disposables.Disposable;
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         network.setOnClickListener(this);
         Button electric = findViewById(R.id.btn_electric);
         electric.setOnClickListener(this);
+        Button btnUI = findViewById(R.id.btn_ui);
+        btnUI.setOnClickListener(this);
     }
 
     @Override
@@ -96,6 +99,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_electric:
                 startActivity(new Intent(this, ElectricActivity.class));
+                break;
+            case R.id.btn_ui:
+                startActivity(new Intent(this, UIActivity.class));
                 break;
         }
     }

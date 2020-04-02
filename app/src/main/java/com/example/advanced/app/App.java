@@ -17,11 +17,13 @@ import com.example.advanced.app.task.InitDBTask;
 import com.example.advanced.app.task.InitDexposedBridgeTask;
 import com.example.advanced.app.task.InitLeakTask;
 import com.example.advanced.app.task.InitNetworkTask;
+import com.example.advanced.app.task.InitSoLoaderTask;
 import com.example.advanced.app.task.InitToastTask;
 import com.example.advanced.launchstarter.TaskDispatcher;
 import com.example.advanced.shared.SharedPreferencesHelper;
 import com.example.advanced.shared.SharedPreferencesImpl;
 import com.example.advanced.start.LoadMultiDexActivity;
+import com.facebook.soloader.SoLoader;
 import com.robot.seabreeze.log.Logger;
 import com.robot.seabreeze.log.inner.LogcatTree;
 
@@ -80,6 +82,7 @@ public class App extends MultiDexApplication {
                 .addTask(new InitDBTask())
                 .addTask(new InitDexposedBridgeTask())
                 .addTask(new InitNetworkTask())
+                .addTask(new InitSoLoaderTask())
                 .start();
 
         //假设数据库初始化需要完成，needWait为true

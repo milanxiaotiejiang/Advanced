@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.advanced.carton.CartonActivity;
 import com.example.advanced.crash.CrashActivity;
+import com.example.advanced.dex.DexActivity;
 import com.example.advanced.electric.ElectricActivity;
 import com.example.advanced.memory.MemoryActivity;
 import com.example.advanced.network.SocketActivity;
@@ -71,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         electric.setOnClickListener(this);
         Button btnUI = findViewById(R.id.btn_ui);
         btnUI.setOnClickListener(this);
+        Button btnDex = findViewById(R.id.btn_dex);
+        btnDex.setOnClickListener(this);
     }
 
     @Override
@@ -102,6 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_ui:
                 startActivity(new Intent(this, UIActivity.class));
+                break;
+            case R.id.btn_dex:
+                startActivity(new Intent(this, DexActivity.class));
                 break;
         }
     }

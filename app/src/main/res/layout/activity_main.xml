@@ -64,5 +64,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="UI" />
+
+        <Button
+            android:id="@+id/btn_dex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="包体积" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

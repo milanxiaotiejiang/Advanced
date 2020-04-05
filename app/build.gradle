@@ -168,6 +168,7 @@ dependencies {
     compileOnly 'com.facebook.litho:litho-sections-annotations:0.33.0'
     annotationProcessor 'com.facebook.litho:litho-sections-processor:0.33.0'
 
+    provided project(':AndroidStub')
 }
 
 //import org.aspectj.bridge.IMessage

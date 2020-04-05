@@ -1,0 +1,2 @@
+android
+int id dataBinding 0x7f0c0001

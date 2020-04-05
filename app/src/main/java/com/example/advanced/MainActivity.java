@@ -13,6 +13,7 @@ import com.example.advanced.carton.CartonActivity;
 import com.example.advanced.crash.CrashActivity;
 import com.example.advanced.dex.DexActivity;
 import com.example.advanced.electric.ElectricActivity;
+import com.example.advanced.hotfix.HotFixActivity;
 import com.example.advanced.memory.MemoryActivity;
 import com.example.advanced.network.SocketActivity;
 import com.example.advanced.shared.SharedActivity;
@@ -74,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnUI.setOnClickListener(this);
         Button btnDex = findViewById(R.id.btn_dex);
         btnDex.setOnClickListener(this);
+        Button btnHotFix = findViewById(R.id.btn_hot_fix);
+        btnHotFix.setOnClickListener(this);
     }
 
     @Override
@@ -108,6 +111,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_dex:
                 startActivity(new Intent(this, DexActivity.class));
+                break;
+            case R.id.btn_hot_fix:
+                startActivity(new Intent(this, HotFixActivity.class));
                 break;
         }
     }

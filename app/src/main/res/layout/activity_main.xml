@@ -70,5 +70,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="包体积" />
+
+        <Button
+            android:id="@+id/btn_hot_fix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="热修复和插件化相关测试" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

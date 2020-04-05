@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\zt\\source_code\\VirtualAPK-master\\AndroidStub\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\76515\\.gradle\\caches\\transforms-2\\files-2.1\\95cfeeba0c58fe69236da925ea4fa335\\library-1.3.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "40",
+                        "endOffsets": "91"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\zt\\source_code\\VirtualAPK-master\\AndroidStub\\build\\intermediates\\res\\merged\\release\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\76515\\.gradle\\caches\\transforms-2\\files-2.1\\95cfeeba0c58fe69236da925ea4fa335\\library-1.3.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "40",
+                        "endOffsets": "91"
+                    }
+                }
+            ]
+        }
+    ]
+}
